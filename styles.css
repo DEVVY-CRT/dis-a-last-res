@@ -21,7 +21,7 @@ button:hover {
   background-color: darkgreen;
 }
 
-#div {
+.fixed-button-container {
   position: fixed;
   opacity: 0.5;
   z-index: 1000;
@@ -72,20 +72,31 @@ h1 {
   background-color: tan;
 }
 
-#difest, #difest1,
+.intro-text,
+.toilet-info,
 .container,
-#m-br {
+.bedroom-container {
   margin-left: 5em;
 }
 
 .container img,
-#m-br img,
-#tndb-ms,
-#tndb1-ms {
+.bath-img-2,
+.bath-img-1,
+.main-bedroom-img-1,
+.main-bedroom-img-2 {
   width: 100%;
   max-width: 320px;
   height: auto;
   border-radius: 10px;
+}
+
+.bath-img-1 {
+  margin-right: 50px;
+}
+
+.main-bedroom-img-1 {
+  margin-left: 260px;
+  border-radius: 20px;
 }
 
 .text-side-by-side {
@@ -131,17 +142,44 @@ h1 {
   }
 
   .container img,
-  #m-br img,
-  #tndb-ms,
-  #tndb1-ms {
+  .main-bedroom-img-1,
+  .main-bedroom-img-2,
+  .bath-img-2,
+  .bath-img-1 {
     width: 100%;
     max-width: 100%;
     height: auto;
   }
 
-  #difest, #difest1,
+  .intro-text,
+  .toilet-info,
   .container,
-  #m-br {
+  .bedroom-container {
     margin-left: 1em;
     margin-right: 1em;
   }
+}
+
+img:hover {
+  transform: scale(1.1);
+  transition: transform 2s ease;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+img {
+  transition: transform 4s ease, box-shadow 0.3s ease;
+}
+
+.opaque-content3 {
+  background-color: #D8CFC4;
+}
+
+.hpfm {
+  width: 15em;
+  margin-bottom: 2em;
+  margin-top: 2em;
+  border-radius: 8px;
+  margin-left: 23em;
+}
+#hfid{
+    margin-left: 10em;
+}
