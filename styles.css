@@ -1,125 +1,114 @@
 body {
-  margin: 0;
-  font-family: sans-serif;
-  background: url('images/ua.jpg') no-repeat center center fixed;
-  background-size: cover;
-}
+      margin: 0;
+      font-family: sans-serif;
+      background: url('images/ua.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
 
-.transparent-window {
-  height: 120vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  backdrop-filter: blur(2.5px);
-  background: transparent;
-  text-align: center;
-  padding: 1rem;
-}
+    .opaque-content{
+      background: aliceblue;
+      padding: 100px 1000px;
+      text-align: left;
+    }
 
-.window-content {
-  background: rgba(255, 255, 255, 0.3);
-  padding: 1.5rem;
-  border-radius: 10px;
-  color: #fff;
-  max-width: 500px;
-  backdrop-filter: blur(10px);
-  font-weight: 800;
-  font-size: 1.5rem;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-  animation: fadeIn 2s ease-in;
-}
+    .transparent-window {
+      height: 120vh;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      backdrop-filter: blur(2.5px);
+    }
+    #div{
+        position: fixed;
+        opacity: 0.5;
+        z-index: 1000;
+    }
+    .window-content{
+       background: rgba(255, 255, 255, 0.3);
+        padding: 20px;
+        border-radius: 10px;
+       color: #ffffff;
+       text-align: left;
+       max-width: 500px;
+       backdrop-filter: blur(10px);
+       font-weight: 800;
+       font-size: 1.5rem;
+       text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+       margin-left: 100px;
+    }
+    h1{
+        font-size: 1em;
+        font-weight: bold;
+    }
+    button{
+        background-color: red;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-weight: bold;
+        font-size: 1rem;
+        border-radius: 6px;
+        cursor: pointer;
+        box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+        transition: background-color 0.3s ease;
+    }
 
-h1 {
-  font-size: 2rem;
-}
+    button:hover {
+            background-color: darkgreen;
+        }
 
-button {
-  background-color: red;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-weight: bold;
-  font-size: 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: darkgreen;
-}
-
-#div {
-  position: fixed;
-  opacity: 0.8;
-  z-index: 1000;
-  top: 10px;
-  left: 10px;
-}
-
-.opaque-content,
-.opaque-content1,
-.opaque-content2 {
-  padding: 2rem;
+    .opaque-content {
+  background-color: rgba(255,255,255,0.9); 
+  padding: 50px;
+  min-height: 400px;
   color: #333;
-}
-
-.opaque-content {
-  background-color: rgba(255, 255, 255, 0.9);
-}
-
+    }
 .opaque-content1 {
-  background-color: burlywood;
+  background-color: burlywood; 
+  padding: 50px;
+  min-height: 400px;
+  color: #333;
+    }
+#difest, #difest1 {
+   margin-left: 5em;
 }
-
-.opaque-content2 {
-  background-color: tan;
+.container{
+    margin-left: 5em
 }
-
-.container, .container1, #m-br {
-  margin-top: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
+#tndb-ms, #tndb1-ms{
+    width: 20em;
 }
-
-img {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  border-radius: 10px;
-  transition: transform 0.5s ease;
+.justify{
+    text-align: justify;
 }
-
-img:hover {
-  transform: scale(1.05);
-}
-
 .text-side-by-side {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin-top: 1rem;
+  gap: 1rem;
+  align-items: flex-start;
 }
 
-.justify {
-  text-align: justify;
-  max-width: 600px;
+.text-side-by-side h2,
+.text-side-by-side p {
+  margin: 20px;
 }
-
-.myh3 {
-  font-family: 'Palatino Linotype', serif;
+.myh3{
+    font-family: palatino;
 }
-
-@media (min-width: 768px) {
-  .text-side-by-side {
-    flex-direction: row;
-    text-align: left;
-    justify-content: center;
-  }
+.opaque-content2 {
+  background-color: tan; 
+  padding: 50px;
+  min-height: 400px;
+  color: #333;
+}
+#m-br#mbr-ms{
+    width: 20em;
+    height: 18.9em;
+    margin-left: 5em;
+}
+#mbr1-ms{
+  height: 300px;
+  width: 20em;
 }
 
 @keyframes fadeIn {
