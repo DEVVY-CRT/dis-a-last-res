@@ -1,52 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Neuville Townhomes</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles1.css" />
 </head>
 <body>
-<div id="div">
-    <a href="index.html"><button><b>HOME</b></button></a>
-    </div>
+  <div id="div">
+    <a href="index1.html"><button><b>HOME</b></button></a>
+  </div>
+
   <section class="transparent-window">
-    
-    <div class="window-content">
-        <p> <i>Meet me at</i></p>
-        <h1><strong>Neuville Townhomes</strong></h1>
-        <p>Sanja Mayor Tanza, Cavite</p>
+    <div class="window-content animate-on-scroll">
+      <p><i>Meet me at</i></p>
+      <h1><strong>Neuville Townhomes</strong></h1>
+      <p>Sanja Mayor Tanza, Cavite</p>
     </div>
   </section>
 
   <section class="opaque-content">
-    <div id="difest">
-    <p>A Different State Of Mind</p>
-    <h3>Established in Sanja Mayor Tanza, Cavite where cultural legacy meets the sought-after culinary scene, is the best kept secret of town, just across the sea front. Its urban renaissance is infusing new vibes and brings back creatives, trend setters and smart investors.</h3>
-  </div>
-  <div class="container"> 
-    <img src="images/mypic.jpg">
-    <h1 class="myh3"><i>Neuville Townhomes Pool</i></h1>
-  </div>
-</section>
-<section class="opaque-content1">
-  <div id="difest1">
-    <h5>The Building</h5>
-    <h3>At Two Stories And With It's <i>Unique Design,</i><br>Neuville Townhomes Is a <i>Modernist Icon</i> In The City's Skyline</h3>
-    <div class="container1">
-      <img style="margin-right: 50px" id="tndb1-ms" src="images/t&b-ms1.jpg">
-      <img id="tndb-ms" src="images/t&bms.jpg">
-      
-      <div class="text-side-by-side">
-        <h2><i>Toilet And Bath</i></h2>
-        <p class="justify">The property includes a<br> state of the art toilet and bath,<br> equipped with a standard<br> flush toilet and shower area.</p>
+    <div id="difest" class="animate-on-scroll">
+      <p>A Different State Of Mind</p>
+      <h3>Established in Sanja Mayor Tanza, Cavite where cultural legacy meets the sought-after culinary scene, is the best kept secret of town, just across the sea front. Its urban renaissance is infusing new vibes and brings back creatives, trend setters and smart investors.</h3>
+    </div>
+
+    <div class="container animate-on-scroll">
+      <img src="images./mypic.jpg" alt="Neuville Townhomes Pool">
+      <h1 class="myh3"><i>Neuville Townhomes Pool</i></h1>
+    </div>
+  </section>
+
+  <section class="opaque-content1">
+    <div id="difest1" class="animate-on-scroll">
+      <h5>The Building</h5>
+      <h3>At Two Stories And With Its <i>Unique Design,</i><br>Neuville Townhomes Is a <i>Modernist Icon</i> In The City's Skyline</h3>
+      <div class="container1 text-side-by-side animate-on-scroll">
+        <img style="margin-right: 50px" id="tndb1-ms" src="images./t&b-ms1.jpg" alt="Toilet and Bath 1">
+        <img id="tndb-ms" src="images./t&bms.jpg" alt="Toilet and Bath 2">
+        <div>
+          <h2><i>Toilet And Bath</i></h2>
+          <p class="justify">The property includes a<br> state of the art toilet and bath,<br> equipped with a standard<br> flush toilet and shower area.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section> 
-<section class="opaque-content2">
-  <div id="m-br">
-    <img src="images/m_br-ms.jpg" id="mbr-ms">
-    <img src="images/m_br1-ms.jpg" id="mbr1-ms">
+  </section>
+
+  <section class="opaque-content2">
+    <div id="m-br" class="animate-on-scroll">
+      <img src="images./m_br-ms.jpg" id="mbr-ms" alt="Main Bedroom">
+      <img src="images./m_br1-ms.jpg" id="mbr1-ms" alt="Main Bedroom Alt">
     </div>
-    </section>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const observerOptions = { threshold: 0.1 };
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.animate-on-scroll').forEach(el => {
+        observer.observe(el);
+      });
+    });
+  </script>
+</body>
+</html>
