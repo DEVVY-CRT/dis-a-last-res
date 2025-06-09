@@ -1,0 +1,113 @@
+body {
+      margin: 0;
+      font-family: sans-serif;
+      background: url('images/ua.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .opaque-content{
+      background: aliceblue;
+      padding: 100px 1000px;
+      text-align: left;
+    }
+
+    .transparent-window {
+      height: 120vh;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      backdrop-filter: blur(2.5px);
+    }
+    #div{
+        position: fixed;
+        opacity: 0.5;
+        z-index: 1000;
+    }
+    .window-content{
+       background: rgba(255, 255, 255, 0.3);
+        padding: 20px;
+        border-radius: 10px;
+       color: #ffffff;
+       text-align: left;
+       max-width: 500px;
+       backdrop-filter: blur(10px);
+       font-weight: 800;
+       font-size: 1.5rem;
+       text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+       margin-left: 100px;
+    }
+    h1{
+        font-size: 1em;
+        font-weight: bold;
+    }
+    button{
+        background-color: red;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-weight: bold;
+        font-size: 1rem;
+        border-radius: 6px;
+        cursor: pointer;
+        box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+            background-color: darkgreen;
+        }
+
+    .opaque-content {
+  background-color: rgba(255,255,255,0.9); 
+  padding: 50px;
+  min-height: 400px;
+  color: #333;
+    }
+.opaque-content1 {
+  background-color: burlywood; 
+  padding: 50px;
+  min-height: 400px;
+  color: #333;
+    }
+#difest, #difest1 {
+   margin-left: 5em;
+}
+.container{
+    margin-left: 5em
+}
+#tndb-ms, #tndb1-ms{
+    width: 20em;
+}
+.justify{
+    text-align: justify;
+}
+.text-side-by-side {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.text-side-by-side h2,
+.text-side-by-side p {
+  margin: 20px;
+}
+.myh3{
+    font-family: palatino;
+}
+.opaque-content2 {
+  background-color: tan; 
+  padding: 50px;
+  min-height: 400px;
+  color: #333;
+}
+#m-br#mbr-ms{
+    width: 20em;
+    height: 18.9em;
+    margin-left: 5em;
+}
+#mbr1-ms{
+  height: 300px;
+  width: 20em;
+  margin-left: 5em;
+}
