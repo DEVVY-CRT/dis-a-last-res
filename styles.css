@@ -7,7 +7,7 @@ body {
 
 button {
   background-color: red;
-  color: white;
+  color: lightgreen;
   border: none;
   padding: 10px 20px;
   font-weight: bold;
@@ -18,8 +18,12 @@ button {
   transition: background-color 0.3s ease;
 }
 button:hover {
-  background-color: darkgreen;
-}
+background-color: lightgreen;   
+  color: red;                 
+  font-weight: 900;  
+  transform: scale(1.05);
+  text-shadow: 0 0 2px #000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);}
 
 
 
@@ -33,17 +37,19 @@ button:hover {
 }
 
 .window-content {
-  background: rgba(255, 255, 255, 0.3);
   padding: 20px;
   border-radius: 10px;
   color: #ffffff;
   text-align: left;
-  max-width: 500px;
-  backdrop-filter: blur(10px);
-  font-weight: 800;
+  max-width: 800px;
+  backdrop-filter: blur(2.5px);
+  font-weight: 400;
   font-size: 1.5rem;
   text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
   margin-left: 100px;
+  display: inline-block;
+  width: fit-content;
+  overflow-x: auto;
 }
 
 h1 {
@@ -71,7 +77,10 @@ h1 {
 .intro-text,
 .toilet-info,
 .container,
-.bedroom-container {
+.bedroom-container,
+.project-overview,
+.f4align,
+.justify {
   margin-left: 5em;
 }
 
@@ -107,6 +116,7 @@ h1 {
 }
 .justify {
   text-align: justify;
+  margin-right: 10em;
 }
 .myh3 {
   font-family: palatino;
@@ -130,6 +140,7 @@ h1 {
     margin-left: 1em;
     font-size: 1.2rem;
     max-width: 90%;
+    backdrop-filter: blur(2.5px);
   }
 
   .text-side-by-side {
@@ -153,11 +164,12 @@ h1 {
   .bedroom-container {
     margin-left: 1em;
     margin-right: 1em;
+    display: flex;
   }
 }
 
 img:hover {
-  transform: scale(1.1);
+  transform: scale(0.5);
   transition: transform 2s ease;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
@@ -181,7 +193,7 @@ img {
 }
 
 .opaque-content4{
-  background: linear-gradient(to top, rgba(255,255,255,0.9), #b2f7b8, #2ecc40);
+  background: linear-gradient(to top, rgba(255,255,255,0.9), #f1ecea);
   padding: 50px;
   min-height: 400px;
   color: #333;
@@ -209,6 +221,8 @@ img {
   align-items: center;
   gap: 10px;
   opacity: 0.5;
+  padding: 5px;
+  border-radius: 10px;
 }
 img #imgsrcf:hover{
   transform: scale(1.2);
@@ -234,4 +248,29 @@ background-color: blanchedalmond;
 .b4po{
   width: 30em;
   border-radius: 10px;
+}
+.fixed-button-container:hover{
+opacity: 2;
+}
+
+.forfw{
+  font-size: 3em;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.window-content p,
+.window-content h1,
+.window-content h6 {
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+}
+.lastsec{
+  background-color: #3e2724;
+  padding: 50px;
+  min-height: 400px;
+  color: #333;
+}
+.git{
+  color: #c4b693;
+  text-align: center;
 }
