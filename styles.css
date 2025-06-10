@@ -21,11 +21,7 @@ button:hover {
   background-color: darkgreen;
 }
 
-.fixed-button-container {
-  position: fixed;
-  opacity: 0.5;
-  z-index: 1000;
-}
+
 
 .transparent-window {
   height: 120vh;
@@ -57,19 +53,19 @@ h1 {
 
 .opaque-content,
 .opaque-content1,
-.opaque-content2 {
+.opaque-content2{
   padding: 50px;
   min-height: 400px;
   color: #333;
 }
 .opaque-content {
-  background-color: rgba(255,255,255,0.9);
+  background: linear-gradient(to top,  burlywood, rgba(255,255,255,0.9))
 }
 .opaque-content1 {
-  background-color: burlywood;
+  background: linear-gradient(to top, #C3B091, tan, burlywood)
 }
 .opaque-content2 {
-  background-color: tan;
+  background-color: #C3B091;
 }
 
 .intro-text,
@@ -182,4 +178,60 @@ img {
 }
 #hfid{
     margin-left: 10em;
+}
+
+.opaque-content4{
+  background: linear-gradient(to top, rgba(255,255,255,0.9), #b2f7b8, #2ecc40);
+  padding: 50px;
+  min-height: 400px;
+  color: #333;
+}
+.opaque-content5{
+  background-color: bisque;
+  padding: 50px;
+  min-height: 400px;
+  color: #333;
+}
+.fixed-button-container img{
+  opacity: 1;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin-left: 0px
+}
+.fixed-button-container {
+  position: fixed;
+  top: 10px;
+  right: 150px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0.5;
+}
+img #imgsrcf:hover{
+  transform: scale(1.2);
+}
+.divindiv{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 10px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-left: 30em;
+}
+.alignment{
+  display: flex
+}
+.opaque-content6 {
+background-color: blanchedalmond;
+  padding: 50px;
+  min-height: 400px;
+  color: #333;
+}
+.b4po{
+  width: 30em;
+  border-radius: 10px;
 }
