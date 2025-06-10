@@ -1,297 +1,309 @@
-@media(max-width: 768px) {
-body {
-  margin: 0;
-  font-family: sans-serif;
-  background: url('images./ua.jpg') no-repeat center center fixed;
-  background-size: cover;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-}
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: sans-serif;
+      background: url('images./ua.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      overflow-x: hidden;
+    }
+    button {
+      background-color: red;
+      color: lightgreen;
+      border: none;
+      padding: 8px 12px;
+      font-weight: bold;
+      font-size: 0.9rem;
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    }
+    button:hover {
+      background-color: lightgreen;
+      color: red;
+      font-weight: 900;
+      transform: scale(1.05);
+      text-shadow: 0 0 2px #000;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    }
+    .fixed-button-container {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      z-index: 1000;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      opacity: 0.5;
+      padding: 5px;
+      border-radius: 10px;
+    }
+    .fixed-button-container:hover {
+      opacity: 1;
+    }
+    .divindiv {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .fixed-button-container img {
+      opacity: 1;
+      width: 25px;
+      height: 25px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    img#imgsrcf:hover {
+      transform: scale(1.2);
+    }
+    .transparent-window {
+      height: auto;
+      min-height: 50vh;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(2.5px);
+      padding: 20px;
+    }
+    .window-content {
+      padding: 15px;
+      border-radius: 10px;
+      color: #ffffff;
+      text-align: center;
+      max-width: 90%;
+      backdrop-filter: blur(2.5px);
+      font-weight: 400;
+      font-size: 1.2rem;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+      width: 100%;
+      overflow-x: auto;
+    }
+    .forfw {
+      font-size: 1.8em;
+      white-space: normal;
+      overflow: hidden;
+    }
+    h1 {
+      font-size: 1em;
+      font-weight: bold;
+    }
+    .window-content p,
+    .window-content h1,
+    .window-content h6 {
+      margin-top: 0.2em;
+      margin-bottom: 0.2em;
+    }
+    .opaque-content, .opaque-content1, .opaque-content2, .opaque-content3,
+    .opaque-content4, .opaque-content5, .opaque-content6, .lastsec {
+      padding: 20px;
+      min-height: 200px;
+    }
+    .opaque-content {
+      background: linear-gradient(to top, burlywood, rgba(255,255,255,0.9));
+    }
+    .opaque-content1 {
+      background: linear-gradient(to top, #C3B091, tan, burlywood);
+    }
+    .opaque-content2 {
+      background-color: #C3B091;
+    }
+    .opaque-content3 {
+      background-color: #D8CFC4;
+    }
+    .opaque-content4 {
+      background: linear-gradient(to top, rgba(255,255,255,0.9), #f1ecea);
+    }
+    .opaque-content5 {
+      background-color: bisque;
+    }
+    .opaque-content6 {
+      background-color: blanchedalmond;
+    }
+    .lastsec {
+      background-color: #3e2724;
+      color: #c4b693;
+    }
+    .project-overview, .intro-text, .toilet-info, .container, 
+    .bedroom-container, .f4align, .justify, .happy-family-section {
+      margin: 0 1em;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .container img, .bath-img-1, .bath-img-2, .main-bedroom-img-1, 
+    .main-bedroom-img-2, .b4po, .hpfm {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 10px;
+      margin: 0 auto;
+    }
+    .hpfm {
+      margin: 1em auto;
+      border-radius: 0.5em;
+    }
+    .text-side-by-side {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+    }
+    .text-side-by-side h2, .text-side-by-side p {
+      margin: 10px 0;
+    }
+    .justify {
+      text-align: justify;
+    }
+    .f4align {
+      text-align: left;
+      width: 100%;
+    }
+    .myh3 {
+      font-family: palatino;
+    }
+    img:not(.social-icon):hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 0.625em rgba(0,0,0,0.5);
+    }
+    img {
+      transition: transform 0.4s ease, box-shadow 0.3s ease;
+    }
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease-out;
+      will-change: opacity, transform;
+    }
+    .animate-on-scroll.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .git {
+      text-align: center;
+    }
+    ul {
+      list-style-position: inside;
+      text-align: left;
+    }
 
-button {
-  background-color: red;
-  color: lightgreen;
-  border: none;
-  padding: 10px 20px;
-  font-weight: bold;
-  font-size: 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-  box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
-  transition: background-color 0.3s ease;
-  min-width: 120px; /* Ensure buttons are large enough */
-}
+    /* Tablet and Larger Screens (min-width: 768px) */
+    @media (min-width: 768px) {
+      button {
+        padding: 10px 20px;
+        font-size: 1rem;
+      }
+      .fixed-button-container {
+        top: 10px;
+        right: 2em;
+        left: auto;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        gap: 10px;
+      }
+      .divindiv {
+        margin-left: 0;
+      }
+      .fixed-button-container img {
+        width: 30px;
+        height: 30px;
+      }
+      .transparent-window {
+        height: 80vh;
+        justify-content: flex-start;
+      }
+      .window-content {
+        margin-left: 2em;
+        font-size: 1.5rem;
+        max-width: 80%;
+        text-align: left;
+      }
+      .forfw {
+        font-size: 2.5em;
+      }
+      .opaque-content, .opaque-content1, .opaque-content2, .opaque-content3,
+      .opaque-content4, .opaque-content5, .opaque-content6, .lastsec {
+        padding: 40px;
+        min-height: 300px;
+      }
+      .project-overview, .intro-text, .toilet-info, .container, 
+      .bedroom-container, .f4align, .justify {
+        margin: 0 2em;
+      }
+      .text-side-by-side {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+      .container img, .bath-img-1, .bath-img-2, .main-bedroom-img-1, 
+      .main-bedroom-img-2, .b4po, .hpfm {
+        max-width: 320px;
+      }
+      .bath-img-1 {
+        margin-right: 20px;
+      }
+      .hpfm {
+        margin: 1em auto;
+      }
+      #hfid {
+        margin-left: auto;
+      }
+    }
 
-button:hover {
-  background-color: lightgreen;   
-  color: red;                 
-  font-weight: 900;  
-  transform: scale(1.05);
-  text-shadow: 0 0 2px #000;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-}
-
-.transparent-window {
-  height: 120vh;
-  background: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center; /* Center content */
-  backdrop-filter: blur(2.5px);
-}
-
-.window-content {
-  padding: 20px;
-  border-radius: 10px;
-  color: #ffffff;
-  text-align: center; /* Center text for better mobile view */
-  max-width: 800px;
-  backdrop-filter: blur(2.5px);
-  font-weight: 400;
-  font-size: 1.5rem;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
-  margin: 0 auto; /* Center the window content */
-}
-
-.opaque-content,
-.opaque-content1,
-.opaque-content2 {
-  padding: 50px;
-  min-height: 400px;
-  color: #333;
-}
-
-.opaque-content {
-  background: linear-gradient(to top, burlywood, rgba(255,255,255,0.9));
-}
-
-.opaque-content1 {
-  background: linear-gradient(to top, #C3B091, tan, burlywood);
-}
-
-.opaque-content2 {
-  background-color: #C3B091;
-}
-
-.intro-text,
-.toilet-info,
-.container,
-.bedroom-container,
-.project-overview,
-.f4align,
-.justify {
-  margin: 0 1em; /* Adjust margins for mobile */
-}
-
-.container img,
-.bath-img-2,
-.bath-img-1,
-.main-bedroom-img-1,
-.main-bedroom-img-2 {
-  width: 100%;
-  max-width: 320px;
-  height: auto;
-  border-radius: 10px;
-}
-
-.bath-img-1 {
-  margin-right: 50px;
-}
-
-.main-bedroom-img-1 {
-  margin-left: 0; /* Remove margin for mobile */
-  border-radius: 20px;
-}
-
-.text-side-by-side {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  align-items: flex-start;
-}
-
-.text-side-by-side h2,
-.text-side-by-side p {
-  margin: 20px;
-}
-
-.justify {
-  text-align: justify;
-}
-
-.myh3 {
-  font-family: palatino;
-}
-
-/* Scroll animation */
-.animate-on-scroll {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease-out;
-  will-change: opacity, transform;
-}
-
-.animate-on-scroll.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Mobile responsive tweaks */
-@media (max-width: 768px) {
-  .window-content {
-    margin: 1em;
-    font-size: 1.2rem;
-    max-width: 90%;
-    backdrop-filter: blur(2.5px);
-  }
-
-  .text-side-by-side {
-    flex-direction: column; /* Stack items vertically */
-    align-items: flex-start;
-  }
-
-  .container img,
-  .main-bedroom-img-1,
-  .main-bedroom-img-2,
-  .bath-img-2,
-  .bath-img-1 {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-  }
-
-  .intro-text,
-  .toilet-info,
-  .container,
-  .bedroom-container {
-    margin: 1em; /* Adjust margins for mobile */
-    display: flex;
-    flex-direction: column; /* Stack elements */
-  }
-
-  .fixed-button-container {
-    flex-direction: column; /* Stack buttons vertically */
-    align-items: center; /* Center buttons */
-  }
-
-  .hpfm {
-    width: 100%; /* Make images responsive */
-    margin-left: 0; /* Center images */
-  }
-}
-
-img:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-}
-
-img {
-  transition: transform 0.4s ease, box-shadow 0.3s ease;
-}
-
-.opaque-content3 {
-  background-color: #D8CFC4;
-}
-
-.hpfm {
-  width: 15em;
-  margin-bottom: 2em;
-  margin-top: 2em;
-  border-radius: 8px;
-  margin-left: auto; /* Center images */
-  margin-right: auto; /* Center images */
-}
-
-#hfid {
-  margin-left: auto; /* Center images */
-  margin-right: auto; /* Center images */
-}
-
-.opaque-content4 {
-  background: linear-gradient(to top, rgba(255,255,255,0.9), #f1ecea);
-  padding: 50px;
-  min-height: 400px;
-  color: #333;
-}
-
-.opaque-content5 {
-  background-color: bisque;
-  padding: 50px;
-  min-height: 400px;
-  color: #333;
-}
-
-.fixed-button-container img {
-  opacity: 1;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  margin-left: 0px;
-}
-
-.fixed-button-container {
-  position: fixed;
-  top: 10px;
-  right: 10px; /* Adjust for mobile */
-  z-index: 1000;
-  display: flex;
-  flex-direction: column; /* Stack buttons vertically */
-  align-items: center; /* Center buttons */
-  gap: 10px;
-  opacity: 0.5;
-  padding: 5px;
-  border-radius: 10px;
-}
-
-.fixed-button-container:hover {
-  opacity: 1; /* Make fully visible on hover */
-}
-
-.divindiv {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 0 10px;
-  border-radius: 6px;
-  overflow: hidden;
-  margin-left: 0; /* Center for mobile */
-}
-
-.opaque-content6 {
-  background-color: blanchedalmond;
-  padding: 50px;
-  min-height: 400px;
-  color: #333;
-}
-
-.b4po {
-  width: 30em;
-  border-radius: 10px;
-}
-
-.forfw {
-  font-size: 3em;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.window-content p,
-.window-content h1,
-.window-content h6 {
-  margin-top: 0.2em;
-  margin-bottom: 0.2em;
-}
-
-.lastsec {
-  background-color: #3e2724;
-  padding: 50px;
-  min-height: 400px;
-  color: #333;
-}
-
-.git {
-  color: #c4b693;
-  text-align: center;
-}
-}
+    /* Desktop Screens (min-width: 1024px) */
+    @media (min-width: 1024px) {
+      .fixed-button-container {
+        right: 4em;
+        gap: 15px;
+      }
+      .divindiv {
+        gap: 10px;
+      }
+      .transparent-window {
+        height: 120vh;
+      }
+      .window-content {
+        margin-left: 100px;
+        max-width: 800px;
+        font-size: 1.5rem;
+      }
+      .forfw {
+        font-size: 3em;
+      }
+      .opaque-content, .opaque-content1, .opaque-content2, .opaque-content3,
+      .opaque-content4, .opaque-content5, .opaque-content6, .lastsec {
+        padding: 50px;
+        min-height: 400px;
+      }
+      .project-overview, .intro-text, .toilet-info, .container, 
+      .bedroom-container, .f4align, .justify {
+        margin-left: 5em;
+      }
+      .justify {
+        margin-right: 10em;
+      }
+      .container img, .bath-img-1, .bath-img-2, .b4po {
+        max-width: 480px;
+      }
+      .main-bedroom-img-1 {
+        max-width: 320px;
+        margin-left: 260px;
+        border-radius: 20px;
+      }
+      .hpfm {
+        width: 15em;
+        margin: 2em 0;
+      }
+      #hfid {
+        margin-left: 10em;
+      }
+    }
